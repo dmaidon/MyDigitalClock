@@ -1,3 +1,6 @@
+Last Edit: May 07, 2026 16:55
+Synopsis: Updated README metadata for the latest documentation refresh covering both WinForms and WPF versions.
+
 # My Digital Clock
 
 A customizable desktop digital clock widget for Windows with automatic day/night theme switching.
@@ -5,7 +8,7 @@ A customizable desktop digital clock widget for Windows with automatic day/night
 ## Version Information
 
 - **Version:** 25.12.11.41
-- **Last Updated:** May 07, 2026
+- **Last Updated:** May 07, 2026 16:55
 - **Target Framework:** .NET 10.0
 
 ## Projects
@@ -26,6 +29,10 @@ Modern WPF implementation with enhanced features:
 - Runtime color customization
 - Context menu for settings
 - Automatic theme switching
+
+## Documentation Status
+
+- CHANGELOG.md is maintained with dated entries that include both WinForms and WPF version notes.
 
 ## Features
 

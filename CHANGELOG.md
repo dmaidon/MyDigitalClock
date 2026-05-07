@@ -1,6 +1,27 @@
+Last Edit: May 07, 2026 16:55
+Synopsis: Added a follow-up update entry for both WinForms and WPF versions and refreshed documentation timestamps.
+
 # Changelog
 
 All notable changes to My Digital Clock will be documented in this file.
+
+## [May 07, 2026 - Follow-up Update]
+
+### Updated - WinForms Version (MyDigitalClock)
+- Refreshed changelog metadata and documented this follow-up update cycle.
+
+### Updated - WPF Version (MyDigitalClock.Wpf)
+- Refreshed changelog metadata and documented this follow-up update cycle.
+
+## [May 07, 2026 - Documentation Update]
+
+### Updated - WinForms Version (MyDigitalClock)
+- Added explicit changelog tracking note for the current documentation refresh.
+- Confirmed version coverage and references remain aligned with the VB.NET WinForms project.
+
+### Updated - WPF Version (MyDigitalClock.Wpf)
+- Added explicit changelog tracking note for the current documentation refresh.
+- Confirmed version coverage and references remain aligned with the C# WPF project.
 
 ## [May 07, 2026]
 

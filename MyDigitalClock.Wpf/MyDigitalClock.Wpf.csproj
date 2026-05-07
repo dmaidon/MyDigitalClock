@@ -9,8 +9,8 @@
     <ImplicitUsings>enable</ImplicitUsings>
 
     <VersionNumber>25.12.11.41</VersionNumber>
-    <AssemblyVersion>26.5.7.65</AssemblyVersion>
-    <FileVersion>26.5.7.65</FileVersion>
+    <AssemblyVersion>26.5.7.71</AssemblyVersion>
+    <FileVersion>26.5.7.71</FileVersion>
     <Version>$(VersionNumber)</Version>
 
     <NeutralLanguage>en-US</NeutralLanguage>
@@ -21,5 +21,17 @@
     <Product>My Digital Clock WPF</Product>
     <Description>A WPF version of My Digital Clock with customizable font and colors</Description>
     <ApplicationIcon>..\MyDigitalClock\Clock.ico</ApplicationIcon>
+    <BaseOutputPath>C:\VB18\Release\MyDigitalClock.Wpf</BaseOutputPath>
+    <GenerateDocumentationFile>True</GenerateDocumentationFile>
+    <PackageOutputPath>C:\VB18\Release\MyDigitalClock.Wpf\</PackageOutputPath>
+    <StartupObject>MyDigitalClock.Wpf.App</StartupObject>
+    <Copyright>© 2026 PAROLE Software - All rights reserved.</Copyright>
+    <PackageIcon>Clock.128.png</PackageIcon>
   </PropertyGroup>
+  <ItemGroup>
+    <None Include="..\..\..\Users\dmaid\Downloads\Clock.128.png">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+  </ItemGroup>
 </Project>

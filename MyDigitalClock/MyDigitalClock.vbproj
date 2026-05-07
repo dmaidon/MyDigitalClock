@@ -12,8 +12,8 @@
     <ApplicationManifest>app.manifest</ApplicationManifest>
 
     <VersionNumber>25.12.11.41</VersionNumber>
-    <AssemblyVersion>26.5.7.69</AssemblyVersion>
-    <FileVersion>26.5.7.69</FileVersion>
+    <AssemblyVersion>26.5.7.70</AssemblyVersion>
+    <FileVersion>26.5.7.70</FileVersion>
     <Version>$(VersionNumber)</Version>
     <PackageVersion>$(VersionNumber)</PackageVersion>
     <InformationalVersion>$(VersionNumber)</InformationalVersion>

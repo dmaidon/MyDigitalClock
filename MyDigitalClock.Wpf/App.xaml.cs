@@ -6,6 +6,7 @@ namespace MyDigitalClock.Wpf;
 
 public partial class App : WpfApplication
 {
+    /// <inheritdoc/>
     protected override void OnStartup(StartupEventArgs e)
     {
         base.OnStartup(e);
