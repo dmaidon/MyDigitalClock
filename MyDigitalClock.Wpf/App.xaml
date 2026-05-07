@@ -1,0 +1,8 @@
+<!-- Last Edit: May 07, 2026 12:52 | Synopsis: Added WPF application definition for standalone MyDigitalClock WPF app. -->
+<Application x:Class="MyDigitalClock.Wpf.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             StartupUri="MainWindow.xaml">
+    <Application.Resources>
+    </Application.Resources>
+</Application>

@@ -1,0 +1,5 @@
+<!-- Last Edit: May 07, 2026 12:52 | Synopsis: Solution now contains both WinForms VB and WPF C# projects as separate apps. -->
+<Solution>
+  <Project Path="MyDigitalClock/MyDigitalClock.vbproj" />
+  <Project Path="MyDigitalClock.Wpf/MyDigitalClock.Wpf.csproj" />
+</Solution>

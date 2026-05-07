@@ -1,0 +1,25 @@
+﻿<!-- Last Edit: May 07, 2026 12:52 | Synopsis: Added separate C# WPF project for MyDigitalClock while preserving WinForms app. -->
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net10.0-windows10.0.26100.0</TargetFramework>
+    <UseWPF>true</UseWPF>
+    <UseWindowsForms>true</UseWindowsForms>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+
+    <VersionNumber>25.12.11.41</VersionNumber>
+    <AssemblyVersion>26.5.7.65</AssemblyVersion>
+    <FileVersion>26.5.7.65</FileVersion>
+    <Version>$(VersionNumber)</Version>
+
+    <NeutralLanguage>en-US</NeutralLanguage>
+    <Company>PAROLE Software</Company>
+    <Authors>Dennis N Maidon</Authors>
+    <AssemblyTitle>My Digital Clock WPF</AssemblyTitle>
+    <Title>My Digital Clock WPF</Title>
+    <Product>My Digital Clock WPF</Product>
+    <Description>A WPF version of My Digital Clock with customizable font and colors</Description>
+    <ApplicationIcon>..\MyDigitalClock\Clock.ico</ApplicationIcon>
+  </PropertyGroup>
+</Project>

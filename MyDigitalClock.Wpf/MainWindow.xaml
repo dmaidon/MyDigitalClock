@@ -1,0 +1,52 @@
+<!-- Last Edit: May 07, 2026 13:17 | Synopsis: Added KeyDown event handler for Ctrl+D Night Light diagnostic. -->
+<Window x:Class="MyDigitalClock.Wpf.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="My Digital Clock (WPF)"
+        Height="170"
+        Width="900"
+        MinHeight="120"
+        MinWidth="560"
+        WindowStyle="None"
+        ResizeMode="CanResizeWithGrip"
+        Background="White"
+        Topmost="True"
+        ShowInTaskbar="True"
+        Loaded="Window_Loaded"
+        Closing="Window_Closing"
+        KeyDown="Window_KeyDown"
+        MouseLeftButtonDown="Window_MouseLeftButtonDown">
+    <Window.ContextMenu>
+        <ContextMenu>
+            <MenuItem Header="Change Font" Click="ChangeFont_Click" />
+            <Separator />
+            <MenuItem Header="Change Text Color" Click="ChangeTextColor_Click" />
+            <MenuItem Header="Change Background Color" Click="ChangeBackgroundColor_Click" />
+            <Separator />
+            <MenuItem Header="Use Auto Theme" Click="UseAutoTheme_Click" />
+            <MenuItem Header="Reset Customization" Click="ResetCustomization_Click" />
+            <Separator />
+            <MenuItem Header="Exit" Click="Exit_Click" />
+        </ContextMenu>
+    </Window.ContextMenu>
+
+    <Border BorderBrush="#11000000" BorderThickness="1" Padding="8">
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="2*" />
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="2*" />
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="2*" />
+                <ColumnDefinition Width="2*" />
+            </Grid.ColumnDefinitions>
+
+            <TextBlock x:Name="HourText" Grid.Column="0" FontSize="82" FontWeight="Bold" Foreground="Maroon" Text="88" VerticalAlignment="Center" HorizontalAlignment="Center" />
+            <TextBlock x:Name="ColonOneText" Grid.Column="1" FontSize="82" FontWeight="Bold" Foreground="Maroon" Text=":" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="6,0" />
+            <TextBlock x:Name="MinuteText" Grid.Column="2" FontSize="82" FontWeight="Bold" Foreground="Maroon" Text="88" VerticalAlignment="Center" HorizontalAlignment="Center" />
+            <TextBlock x:Name="ColonTwoText" Grid.Column="3" FontSize="82" FontWeight="Bold" Foreground="Maroon" Text=":" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="6,0" />
+            <TextBlock x:Name="SecondText" Grid.Column="4" FontSize="82" FontWeight="Bold" Foreground="Maroon" Text="88" VerticalAlignment="Center" HorizontalAlignment="Center" />
+            <TextBlock x:Name="AmPmText" Grid.Column="5" FontSize="44" FontWeight="Bold" Foreground="Maroon" Text="AM" VerticalAlignment="Top" HorizontalAlignment="Center" Margin="0,16,0,0" />
+        </Grid>
+    </Border>
+</Window>

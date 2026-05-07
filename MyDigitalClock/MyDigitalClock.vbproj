@@ -1,0 +1,96 @@
+<!-- Last Edit: May 07, 2026 13:17 | Synopsis: Configured VB Application Framework with WindowsForms MyType and MainForm startup. -->
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net10.0-windows10.0.26100.0</TargetFramework>
+    <RootNamespace>MyDigitalClock</RootNamespace>
+    <UseWindowsForms>true</UseWindowsForms>
+    <MyType>WindowsForms</MyType>
+    <StartupObject>Sub Main</StartupObject>
+    <OptionStrict>On</OptionStrict>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+
+    <VersionNumber>25.12.11.41</VersionNumber>
+    <AssemblyVersion>26.5.7.69</AssemblyVersion>
+    <FileVersion>26.5.7.69</FileVersion>
+    <Version>$(VersionNumber)</Version>
+    <PackageVersion>$(VersionNumber)</PackageVersion>
+    <InformationalVersion>$(VersionNumber)</InformationalVersion>
+
+    <NeutralLanguage>en-US</NeutralLanguage>
+    <PackageIcon>Clock.128.png</PackageIcon>
+    <Company>PAROLE Software</Company>
+    <Authors>Dennis N Maidon</Authors>
+    <AssemblyTitle>My Digital Clock</AssemblyTitle>
+    <Title>My Digital Clock</Title>
+    <Product>My Digital Clock</Product>
+    <Description>A customizable digital clock desktop widget with automatic day/night themes</Description>
+    <Copyright>Copyright © 2025 Dennis N Maidon</Copyright>
+    <SupportedOSPlatformVersion>10.0.26100.0</SupportedOSPlatformVersion>
+
+    <ApplicationHighDpiMode>PerMonitorV2</ApplicationHighDpiMode>
+    <ApplicationDefaultFont>Microsoft Sans Serif, 8pt</ApplicationDefaultFont>
+
+    <AnalysisLevel>latest</AnalysisLevel>
+    <GenerateDocumentationFile>True</GenerateDocumentationFile>
+    <EnforceCodeStyleInBuild>true</EnforceCodeStyleInBuild>
+    <EnableNETAnalyzers>true</EnableNETAnalyzers>
+
+    <ApplicationIcon>Clock.ico</ApplicationIcon>
+    <MainForm>FrmClock</MainForm>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <OutputPath>C:\VB18\Release\MyDigitalClock</OutputPath>
+    <DebugType>full</DebugType>
+    <DebugSymbols>true</DebugSymbols>
+    <Optimize>false</Optimize>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <OutputPath>C:\VB18\Release\MyDigitalClock</OutputPath>
+    <DebugType>none</DebugType>
+    <DebugSymbols>false</DebugSymbols>
+    <Optimize>true</Optimize>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Resources\Clock.128.png" />
+    <None Remove="Resources\Clock.ico" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="Clock.ico" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\Clock.128.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Clock.ico">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </EmbeddedResource>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Windows.Forms" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="images\" />
+    <Folder Include="Partials\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="..\..\..\Users\dmaid\Downloads\Clock.128.png">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+    <None Include="MyDigitalClock.csproj" />
+  </ItemGroup>
+
+</Project>
+
