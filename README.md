@@ -1,5 +1,5 @@
-Last Edit: May 07, 2026 16:55
-Synopsis: Updated README metadata for the latest documentation refresh covering both WinForms and WPF versions.
+Last Edit: May 08, 2026 07:04
+Synopsis: Updated README with tray-based off-screen Locate recovery, window size restore behavior, and single-instance WPF startup.
 
 # My Digital Clock
 
@@ -8,7 +8,7 @@ A customizable desktop digital clock widget for Windows with automatic day/night
 ## Version Information
 
 - **Version:** 25.12.11.41
-- **Last Updated:** May 07, 2026 16:55
+- **Last Updated:** May 08, 2026 07:04
 - **Target Framework:** .NET 10.0
 
 ## Projects
@@ -72,6 +72,9 @@ Modern WPF implementation with enhanced features:
 ### WPF Version
 - **Drag:** Left-click and drag to reposition
 - **Resize:** Drag the resize grip in bottom-right corner
+- **Taskbar Icon Menu:** Right-click tray icon for:
+  - Locate (moves the clock to 250,250)
+  - Exit
 - **Context Menu:** Right-click for options:
   - Change Font
   - Change Text Color
@@ -80,6 +83,10 @@ Modern WPF implementation with enhanced features:
   - Reset Customization
   - Exit
 - **Diagnostic:** Press Ctrl+D to view Night Light diagnostic info
+
+### WPF Single-Instance Behavior
+- Only one WPF instance runs at a time.
+- Starting the app while one instance is already running exits the second launch.
 
 ## Theme System
 

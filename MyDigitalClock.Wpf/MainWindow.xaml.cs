@@ -1,4 +1,4 @@
-// Last Edit: May 07, 2026 16:27 | Synopsis: Fixed S6966 async warnings by using File.WriteAllTextAsync and File.AppendAllTextAsync.
+// Last Edit: May 08, 2026 06:58 | Synopsis: Ensured Locate is available from tray icon menu only and removed in-app Locate handler.
 using System.Globalization;
 using System.IO;
 using System.Net.Http;
@@ -8,6 +8,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Threading;
 using Forms = System.Windows.Forms;
+using DrawingIcon = System.Drawing.Icon;
 using WpfBrush = System.Windows.Media.Brush;
 using WpfColor = System.Windows.Media.Color;
 using WpfColorConverter = System.Windows.Media.ColorConverter;
@@ -29,6 +30,7 @@ public partial class MainWindow : Window
     private const double Longitude = -78.328611;
 
     private readonly DispatcherTimer _clockTimer;
+    private Forms.NotifyIcon? _notifyIcon;
 
     private int _lastDisplayedHour = -1;
     private int _lastDisplayedMinute = -1;
@@ -57,6 +59,8 @@ public partial class MainWindow : Window
     {
         public double Left { get; set; }
         public double Top { get; set; }
+        public double Width { get; set; }
+        public double Height { get; set; }
         public string? FontFamily { get; set; }
         public double NumberFontSize { get; set; } = 82;
         public double AmPmFontSize { get; set; } = 44;
@@ -75,6 +79,7 @@ public partial class MainWindow : Window
     private void Window_Loaded(object sender, RoutedEventArgs e)
     {
         CreateFolders();
+        InitializeNotifyIcon();
         SetDigitalFont();
         LoadSettings();
         LoadOrFetchSunTimes();
@@ -92,6 +97,7 @@ public partial class MainWindow : Window
     {
         _clockTimer.Stop();
         SaveSettings();
+        DisposeNotifyIcon();
     }
 
     private void Window_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
@@ -214,6 +220,16 @@ public partial class MainWindow : Window
                 Top = settings.Top;
             }
 
+            if (!double.IsNaN(settings.Width) && settings.Width >= MinWidth)
+            {
+                Width = settings.Width;
+            }
+
+            if (!double.IsNaN(settings.Height) && settings.Height >= MinHeight)
+            {
+                Height = settings.Height;
+            }
+
             _isAutoThemeEnabled = settings.IsAutoThemeEnabled;
 
             if (!string.IsNullOrWhiteSpace(settings.FontFamily))
@@ -258,6 +274,8 @@ public partial class MainWindow : Window
             {
                 Left = Left,
                 Top = Top,
+                Width = Width,
+                Height = Height,
                 FontFamily = HourText.FontFamily.Source,
                 NumberFontSize = HourText.FontSize,
                 AmPmFontSize = AmPmText.FontSize,
@@ -421,6 +439,68 @@ public partial class MainWindow : Window
 
     private static string ColorToHex(System.Drawing.Color color)
         => $"#{color.A:X2}{color.R:X2}{color.G:X2}{color.B:X2}";
+
+    private void InitializeNotifyIcon()
+    {
+        DisposeNotifyIcon();
+
+        Forms.ContextMenuStrip trayMenu = new();
+        trayMenu.Items.Add("Locate", null, LocateFromTray_Click);
+        trayMenu.Items.Add("Exit", null, ExitFromTray_Click);
+
+        _notifyIcon = new Forms.NotifyIcon
+        {
+            Text = "My Digital Clock",
+            ContextMenuStrip = trayMenu,
+            Visible = true
+        };
+
+        if (!string.IsNullOrWhiteSpace(Environment.ProcessPath))
+        {
+            DrawingIcon? appIcon = DrawingIcon.ExtractAssociatedIcon(Environment.ProcessPath);
+            if (appIcon is not null)
+            {
+                _notifyIcon.Icon = appIcon;
+            }
+        }
+    }
+
+    private void DisposeNotifyIcon()
+    {
+        if (_notifyIcon is null)
+        {
+            return;
+        }
+
+        _notifyIcon.Visible = false;
+        _notifyIcon.ContextMenuStrip?.Dispose();
+        _notifyIcon.Dispose();
+        _notifyIcon = null;
+    }
+
+    private void LocateFromTray_Click(object? sender, EventArgs e)
+    {
+        LocateWindow();
+    }
+
+    private void LocateWindow()
+    {
+        Left = 250;
+        Top = 250;
+
+        if (WindowState == WindowState.Minimized)
+        {
+            WindowState = WindowState.Normal;
+        }
+
+        Activate();
+        SaveSettings();
+    }
+
+    private void ExitFromTray_Click(object? sender, EventArgs e)
+    {
+        Close();
+    }
 
     private void ChangeFont_Click(object sender, RoutedEventArgs e)
     {

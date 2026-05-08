@@ -1,4 +1,4 @@
-<!-- Last Edit: May 07, 2026 13:17 | Synopsis: Added KeyDown event handler for Ctrl+D Night Light diagnostic. -->
+<!-- Last Edit: May 08, 2026 06:58 | Synopsis: Removed Locate from in-app context menu so off-screen recovery is taskbar icon menu only. -->
 <Window x:Class="MyDigitalClock.Wpf.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"

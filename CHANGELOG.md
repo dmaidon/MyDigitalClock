@@ -1,9 +1,20 @@
-Last Edit: May 07, 2026 16:55
-Synopsis: Added a follow-up update entry for both WinForms and WPF versions and refreshed documentation timestamps.
+Last Edit: May 08, 2026 07:04
+Synopsis: Documented tray Locate off-screen recovery, window size persistence, and single-instance startup update.
 
 # Changelog
 
 All notable changes to My Digital Clock will be documented in this file.
+
+## [May 08, 2026 - Behavior Update]
+
+### Updated - WinForms Version (MyDigitalClock)
+- No functional behavior changes in this update cycle.
+
+### Updated - WPF Version (MyDigitalClock.Wpf)
+- Added taskbar icon menu support for **Locate** to recover the clock when off-screen.
+- Added taskbar icon menu support for **Exit**.
+- Added persistence for window **Width** and **Height** in settings so the app restarts at the previous size.
+- Enforced single-instance execution using a named startup mutex.
 
 ## [May 07, 2026 - Follow-up Update]
 
