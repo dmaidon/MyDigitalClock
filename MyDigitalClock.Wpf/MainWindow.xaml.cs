@@ -7,8 +7,8 @@ using System.Windows;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Threading;
-using Forms = System.Windows.Forms;
 using DrawingIcon = System.Drawing.Icon;
+using Forms = System.Windows.Forms;
 using WpfBrush = System.Windows.Media.Brush;
 using WpfColor = System.Windows.Media.Color;
 using WpfColorConverter = System.Windows.Media.ColorConverter;
@@ -44,6 +44,9 @@ public partial class MainWindow : Window
     private bool _currentThemeIsDark;
     private bool _isAutoThemeEnabled = true;
 
+    /// <summary>
+    /// Initializes a new instance of the MainWindow class and sets up the clock timer.
+    /// </summary>
     public MainWindow()
     {
         InitializeComponent();

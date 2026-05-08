@@ -33,20 +33,20 @@
     <Border BorderBrush="#11000000" BorderThickness="1" Padding="8">
         <Grid>
             <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="2*" />
+                <ColumnDefinition Width="232*" />
+                <ColumnDefinition Width="Auto" MinWidth="41.223" />
+                <ColumnDefinition Width="232*" />
                 <ColumnDefinition Width="Auto" />
-                <ColumnDefinition Width="2*" />
-                <ColumnDefinition Width="Auto" />
-                <ColumnDefinition Width="2*" />
-                <ColumnDefinition Width="2*" />
+                <ColumnDefinition Width="232*" />
+                <ColumnDefinition Width="116*" />
             </Grid.ColumnDefinitions>
 
-            <TextBlock x:Name="HourText" Grid.Column="0" FontSize="82" FontWeight="Bold" Foreground="Maroon" Text="88" VerticalAlignment="Center" HorizontalAlignment="Center" />
-            <TextBlock x:Name="ColonOneText" Grid.Column="1" FontSize="82" FontWeight="Bold" Foreground="Maroon" Text=":" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="6,0" />
-            <TextBlock x:Name="MinuteText" Grid.Column="2" FontSize="82" FontWeight="Bold" Foreground="Maroon" Text="88" VerticalAlignment="Center" HorizontalAlignment="Center" />
-            <TextBlock x:Name="ColonTwoText" Grid.Column="3" FontSize="82" FontWeight="Bold" Foreground="Maroon" Text=":" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="6,0" />
-            <TextBlock x:Name="SecondText" Grid.Column="4" FontSize="82" FontWeight="Bold" Foreground="Maroon" Text="88" VerticalAlignment="Center" HorizontalAlignment="Center" />
-            <TextBlock x:Name="AmPmText" Grid.Column="5" FontSize="44" FontWeight="Bold" Foreground="Maroon" Text="AM" VerticalAlignment="Top" HorizontalAlignment="Center" Margin="0,16,0,0" />
+            <TextBlock x:Name="HourText" Grid.Column="0" FontSize="82" FontWeight="Bold" Foreground="Maroon" Text="88" Margin="66,21,66,21" />
+            <TextBlock x:Name="ColonOneText" Grid.Column="1" FontSize="82" FontWeight="Bold" Foreground="Maroon" Text=":" Margin="10,21,9,21" />
+            <TextBlock x:Name="MinuteText" Grid.Column="2" FontSize="82" FontWeight="Bold" Foreground="Maroon" Text="88" Margin="69,21,69,21" />
+            <TextBlock x:Name="ColonTwoText" Grid.Column="3" FontSize="82" FontWeight="Bold" Foreground="Maroon" Text=":" Margin="6,21,6,21" />
+            <TextBlock x:Name="SecondText" Grid.Column="4" FontSize="82" FontWeight="Bold" Foreground="Maroon" Text="88" Margin="69,21,69,21" />
+            <TextBlock x:Name="AmPmText" Grid.Column="5" FontSize="44" FontWeight="Bold" Foreground="Maroon" Text="AM" VerticalAlignment="Top" Margin="21,16,22,0" Height="59" />
         </Grid>
     </Border>
 </Window>

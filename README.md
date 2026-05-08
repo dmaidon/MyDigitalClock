@@ -1,5 +1,5 @@
-Last Edit: May 08, 2026 07:04
-Synopsis: Updated README with tray-based off-screen Locate recovery, window size restore behavior, and single-instance WPF startup.
+Last Edit: May 08, 2026 08:57
+Synopsis: Refreshed README metadata and confirmed current documentation status for both WinForms and WPF projects.
 
 # My Digital Clock
 
@@ -8,7 +8,7 @@ A customizable desktop digital clock widget for Windows with automatic day/night
 ## Version Information
 
 - **Version:** 25.12.11.41
-- **Last Updated:** May 08, 2026 07:04
+- **Last Updated:** May 08, 2026 08:57
 - **Target Framework:** .NET 10.0
 
 ## Projects
